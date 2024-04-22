@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="general">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="ingreso()">Ingresar</button>
+                <button type="button" class="toggle-btn" onclick="registro()">Registrar</button>
+            </div>
+            <!--
+            <div class="social-icons">
+                <img src="./css/facebook.png" alt="icon facebook\">
+                <img src="./css/twitter.png" alt="icon twitter">
+                <img src="./css/instagram.png" alt="icon instagram">
+            </div>
+        -->
+            <form id="ingreso" class="input-group">
+                <input type="text" class="input-field" placeholder="Nombre de Usuario">
+                <input type="text" class="input-field" placeholder="Contraseña">
+                <input type="checkbox" class="check-box"> Recordar Contraseña
+                <button type="submit" class="submit-button">Ingresar</button>
+            </form>
+            <form id="registro" class="input-group">
+                <input type="text" class="input-field" placeholder="Nombre de Usuario">
+                <input type="email" class="input-field" placeholder="Correo electronico">
+                <input type="text" class="input-field" placeholder="Contraseña">
+                <input type="checkbox" class="check-box"> Acepto terminos y condiciones.
+                <button type="submit" class="submit-button">Registrarse</button>
+            </form>
+            <div class="social-icons">
+                <img src="./css/facebook.png" alt="icon facebook\">
+                <img src="./css/twitter.png" alt="icon twitter">
+                <img src="./css/instagram.png" alt="icon instagram">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var x = document.getElementById("ingreso")
+        var y = document.getElementById("registro")
+        var z = document.getElementById("btn")
+
+        function registro() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function ingreso() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>
