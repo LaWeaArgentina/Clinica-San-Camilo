@@ -1,33 +1,114 @@
-.header{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+body{
+    margin: 0;
 }
-.content{
-    grid-area: content;
-    > button{
-        background-color: #009e96;
-        border: none;
-        border-radius: 15px;
-        width: 80%;
-        height: 50%;
-        font-size: 1.5em;
-        box-shadow: 60px -16px black;
-        box-shadow: 0px 0px 34px 0px rgba(0,0,0,0.30);
-        > a{
-            color:white;
-        }
-    }
-    .ingresar{    
-        background: linear-gradient(to right, #009e96, #7ac9c5);
-    }
-    .registro{
-        border: 2px solid #009e96;
-        background-color: white;
-        > a{
-            color:#009e96;
-        }
-    }
+.form-box{
+    max-width: 380px;
+    min-width: 320px;
+    height: 550px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-box{
+    width: 250px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #1ebb95;
+    border-radius: 30px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    background: linear-gradient(to right, #34E692,#34E6D1);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.social-icons{
+    /*margin: 30px auto; */
+    margin-top: 100px;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+
+}
+
+.social-icons img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px #7f7f7f3d;
+    cursor: pointer;
+}
+
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-button{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #34E692,#34E6D1);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    
+}
+
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+
+/* span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+*/
+
+#ingreso {
+    left: 50px;
+}
+
+#registro {
+    left: 450px;
 }
 
 @media screen and (min-width: 425px) {

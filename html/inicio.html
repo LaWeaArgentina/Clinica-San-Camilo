@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+
+</head>
+
+<body>
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="ingreso()">Ingresar</button>
+            <button type="button" class="toggle-btn" onclick="registro()">Registrar</button>
+        </div>
+        <form id="ingreso" class="input-group">
+            <input type="text" class="input-field" placeholder="Nombre de Usuario">
+            <input type="text" class="input-field" placeholder="Contraseña">
+            <label for="recordar_contraseña">
+                <input type="checkbox" class="check-box" id="recordar_contraseña">
+                Recordar Contraseña
+            </label>
+            <button type="submit" class="submit-button">Ingresar</button>
+        </form>
+        <form id="registro" class="input-group">
+            <input type="text" class="input-field" placeholder="Nombre de Usuario">
+            <input type="email" class="input-field" placeholder="Correo electronico">
+            <input type="text" class="input-field" placeholder="Contraseña">
+            <label for="aceptar_terminos">
+                <input type="checkbox" class="check-box" id="aceptar_terminos">
+                Acepto terminos y condiciones
+            </label>
+            <button type="submit" class="submit-button">Registrarse</button>
+        </form>
+        <div class="social-icons">
+            <img src="../img/ico/facebook.png" alt="icon facebook\">
+            <img src="../img/ico/twitter.png" alt="icon twitter">
+            <img src="../img/ico/instagram.png" alt="icon instagram">
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("ingreso")
+        var y = document.getElementById("registro")
+        var z = document.getElementById("btn")
+
+        function registro() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function ingreso() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

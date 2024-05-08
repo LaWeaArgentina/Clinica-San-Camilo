@@ -1,7 +1,10 @@
-body{
+html{
     margin: 0;
-    background-color: #ebebeb;
-
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(180, 149, 149, 0.4),rgba(180, 149, 149, 0.4)), url(../img/fondo.jpg);
+    background-size: cover;
+    position: absolute;
 }
 .main-grid{
     display: grid;
