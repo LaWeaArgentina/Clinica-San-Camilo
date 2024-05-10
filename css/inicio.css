@@ -1,5 +1,8 @@
 body{
     margin: 0;
+    background-image: linear-gradient(rgba(180, 149, 149, 0.4),rgba(180, 149, 149, 0.4)), url(../img/fondo.jpg);
+    background-size: cover;
+    position: absolute;
 }
 .form-box{
     max-width: 380px;
@@ -49,13 +52,6 @@ body{
     left: 0;
     width: 100%;
 
-}
-
-.social-icons img{
-    width: 30px;
-    margin: 0 12px;
-    box-shadow: 0 0 20px #7f7f7f3d;
-    cursor: pointer;
 }
 
 .input-group{
@@ -111,7 +107,9 @@ body{
     left: 450px;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 426px) {
+        /* Layout Tablet*/
+
     .content{
         > button{
             width: 50%;
@@ -119,7 +117,8 @@ body{
     }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
+        /* Layout PC*/
     .content{
         > button{
             width: 30%;
