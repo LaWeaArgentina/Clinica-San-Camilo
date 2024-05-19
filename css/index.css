@@ -1,40 +1,37 @@
-.content{
-    grid-area: content;
-    padding-bottom: 7em;
+.content {
+  grid-area: content;
+  padding-bottom: 7em;
 }
-.content > a{
+.content > a {
+  border: 2px #ebebeb solid;
+  :hover {
+    border: white;
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+  }
 
-    border: 2px #ebebeb solid;
-    :hover{
-        border:white;
-        transform: scale(1.15);
-        transition-duration: 0.5s;    
-    }
-
-    button{
-        background-color: #009e96;
-        border: none;
-        border-radius: 15px;
-        width: 100%;
-        height: 100%;
-        font-size: 1.5em;
-        box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.30);
-        background: linear-gradient(to right, #009e96, #7ac9c5);
-        color:white;
-    }
+  button {
+    background-color: #009e96;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #009e96, #7ac9c5);
+    color: white;
+  }
 }
-    
 
-.content > a{
-    width: 70%;
-    height: 70%;
+.content > a {
+  width: 70%;
+  height: 70%;
 }
 
 @media screen and (min-width: 426px) {
-        /* Layout Tablet*/
+  /* Layout Tablet*/
 }
 
 @media screen and (min-width: 1400px) {
-        /* Layout PC*/
+  /* Layout PC*/
 }
-  

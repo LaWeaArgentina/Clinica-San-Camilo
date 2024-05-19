@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/css/form-reg.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div id=" validado">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Form-registration</title>
+</head>
+
+
+<body>
+
+
+
+    <form id="form" method="post" action="javascript:void(0)" id="main_form">
+
+
+
+        <img id="logo" src="img/clinica-logo.png" alt="Logo.clinica">
+
+        <div class="container">
+            <h4>Formulario de Registro</h4>
+            <div id="contact-register-form">
+                <div>
+                    <label for="username">Nombre</label>
+                </div>
+                <input name="name" id="username" type="text" placeholder="Ingrese su Nombre" pattern="[A-Za-z]{1,50}"
+                    title="El campo no acepta numeros" maxlength="50" required>
+
+
+
+                <div>
+                    <label for="userLastname">Apellido</label>
+                </div>
+                <input name="lastname" id="userLastname" type="text" placeholder="Ingrese su Apellido"
+                    pattern="[A-Za-z]{1,50}" maxlength="50" title="El campo no acepta numeros" required>
+
+
+
+                <div class="gen">
+                    <label class="genero">Género</label>
+
+                    <div class="genero-tabla">
+                        <div>
+                            <input id="Male" type="radio" name="gender" value="Male" data-once="">
+                            <label for="Male">Male</label>
+                        </div>
+
+                        <div>
+                            <input id="Female" type="radio" name="gender" value="Female" data-once="">
+                            <label for="Female">Female</label>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+                <div><label for="userbday">Fecha de Nacimiento</label></div>
+                <input type="date" name="birthday" id="userbday" min="1899-01-01"
+                    title="Seleccione su Fecha de Nacimiento" required>
+
+                <div><label for="useremail">Correo Electrónico</label></div>
+                <input name="email" id="useremail" type="email" placeholder="Ingrese su correo electrónico"
+                    maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+
+                <div>
+                    <label for="userPass">Escriba una Contraseña</label>
+                </div>
+                <input name="password" id="userPass" type="password" placeholder="Ingrese una contraseña" maxlength="20"
+                    title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número" required>
+
+                <div>
+                    <label for="userConfirmPass">Confirmar Contraseña</label>
+                </div>
+                <input name="confirmPassword" id="userConfirmPass" type="password" placeholder="Confirme su contraseña"
+                    maxlength="20"
+                    title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número" required>
+
+
+                <div>
+                    <input type="file" id="os-img" name="image" accept="image/jpeg, image/png, image/gif, image/jpg"
+                        title="Subir Imagen">
+                </div>
+
+                <input type="submit" class="enviar-btn button" value="Enviar">
+
+
+
+    </form>
+
+    <div id="small-card-left" class="card"></div>
+    <div id="medium-card-left" class="card"></div>
+    <div id="large-card-right" class="card"></div>
+
+    <script src="script.js"></script>
+</body>

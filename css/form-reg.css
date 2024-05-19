@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: radial-gradient(rgb(5, 160, 152), rgba(5, 160, 152, 0.501));
+}
+
+#contact-register-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  max-height: 90%;
+  flex-wrap: wrap;
+  z-index: 1;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.no-valido {
+  background-color: #ff3f3f8e;
+}
+
+h4 {
+  text-align: left;
+  margin: 5px 3px;
+  font-size: 3rem;
+  color: #05a098;
+}
+
+label {
+  text-align: left;
+  margin: 5px 3px;
+  font-size: 2rem;
+  color: #05a098;
+}
+
+form div {
+  margin: 20px;
+
+  margin: 5px 3px;
+}
+
+input[type="radio"] {
+  display: block;
+  margin: 4px 0px 2px 2px;
+  box-shadow: 0 0px 0px 0 rgba(31, 38, 135, 0);
+  backdrop-filter: none;
+  border-radius: 0px;
+  border: none;
+}
+.genero-tabla {
+  display: flex;
+}
+
+.gen {
+  display: flex;
+  flex-direction: column;
+  margin: 22px;
+  align-items: center;
+}
+
+input[type="date"] {
+  font-size: 16px;
+  color: #131315a0;
+}
+
+input::placeholder {
+  font: italic 1.2rem;
+  color: #131315a0;
+}
+
+.container:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  position: absolute;
+  border-radius: 15px;
+  width: 100vh;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  padding-top: 60px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+  margin: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5); /*adds top shine*/
+  border-left: 1px solid rgba(255, 255, 255, 0.5); /*adds top shine*/
+  backdrop-filter: blur(5px);
+  background:whitesmoke;
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  &:hover {
+    box-shadow: 1px 1px 20px 0 #04817a6e;
+  }
+}
+
+input:focus {
+  border-bottom: 2px solid #66cc99;
+}
+
+input {
+  display: block;
+  width: 315px;
+  padding: 14px;
+  border-radius: 6px;
+  border: 0;
+  margin-bottom: 20px;
+  color: #7f8c8d;
+  font-weight: 600;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 1px 1px 7px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input [type="checkbox"] {
+  width: 400px;
+}
+
+#logo {
+  z-index: 3;
+
+  top: 20px;
+  right: 20px;
+  margin-bottom: 20px;
+  max-width: 200px;
+  max-height: 200px;
+  filter: drop-shadow(2px 1px 3px gray);
+}
+
+.enviar-btn {
+  padding: 14px 10px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #0d8b6e;
+  border-color: #0d8b6e; /* Cambiamos el color del borde en el estado hover/focus */
+  box-shadow: inset 0 0 0 4px var(--primary-colour), 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.enviar-btn:hover,
+.enviar-btn:focus {
+  background-color: #0d8b6e;
+  color: rgba(255, 255, 255, 0.8);
+  border-color: #0d8b6e; /* Cambiamos el color del borde en el estado hover/focus */
+  box-shadow: inset 0 0 0 4px var(--primary-colour), 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/*  no pude llegar a los cuadrados para lacard del formulario a revisa para proxima instanica
+#small-card-left {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(66, 183, 162, 0.2);
+  position: absolute;
+  bottom: 16px;
+  left: -32px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+  transform: scale3d(1, 1, 1);
+  transition: all 0.2s ease-out, filter 0.75s ease-out;
+
+  backdrop-filter: blur(10px);
+  z-index: 20;
+}
+
+#medium-card-left {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+  transform: scale3d(1, 1, 1);
+  transition: all 0.2s ease-out, filter 0.75s ease-out;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  top: -46px;
+  left: -29px;
+  z-index: 0;
+}
+
+#large-card-right {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(183, 66, 66, 0.2);
+  position: absolute;
+  border-radius: 1rem;
+  /* overflow: hidden; */
+  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+  transform: scale3d(1, 1, 1);
+  transition: all 0.2s ease-out, filter 0.75s ease-out;
+
+  backdrop-filter: blur(10px);
+  top: 169px;
+  right: -30px;
+  z-index: 0;
+} 
+*/ */
