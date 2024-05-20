@@ -2,8 +2,10 @@
   grid-area: content;
   padding-bottom: 7em;
 }
-.content > a {
+.content > form {
   border: 2px #ebebeb solid;
+  width: 60%;
+  height: 60%;
   :hover {
     border: white;
     transform: scale(1.15);

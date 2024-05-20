@@ -1,12 +1,10 @@
-
-
-
 function validarFormulario() {
     var nombre = document.getElementById("username").value.trim();
     var apellido = document.getElementById("userLastname").value.trim();
     var genero = document.querySelector('input[name="gender"]:checked');
     var fechaNacimiento = document.getElementById("userbday").value;
     var correo = document.getElementById("useremail").value.trim();
+    var prepaga = document.getElementById("prepaga").value.trim();
     var contrasena = document.getElementById("userPass").value;
     var confirmarContrasena = document.getElementById("userConfirmPass").value;
     var imagen = document.getElementById("os-img").files.length;
@@ -48,6 +46,12 @@ function validarFormulario() {
     // Validación de correo electrónico
     if (correo === "") {
         alert("Por favor ingrese su correo electrónico.");
+        return false;
+    }
+    
+    // Validación de correo electrónico
+    if (prepaga === "") {
+        alert("Seleccione una opción de medicina prepaga.");
         return false;
     }
 
