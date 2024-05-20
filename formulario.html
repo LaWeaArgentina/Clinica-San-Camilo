@@ -52,23 +52,24 @@
                 <input name="email" id="useremail" type="email" placeholder="Ingrese su correo electrónico"
                 maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
 
-                <label for="prepaga">¿Posee medicina prepaga?</label>
-                <select name="prepaga" id="prepaga" required>
-                    <option value="">No</option>
-                    <option value="">OSDE</option>
-                    <option value="">Medicus</option>
-                    <option value="">Omint</option>
-                    <option value="">Otro</option>
-                </select>
+             <label for="prepaga">¿Posee medicina prepaga?</label>
+        <select name="prepaga" id="prepaga" required>
+            <option value="">Seleccione una opción</option>
+            <option value="No">No</option>
+            <option value="OSDE">OSDE</option>
+            <option value="Medicus">Medicus</option>
+            <option value="Omint">Omint</option>
+            <option value="Otro">Otro</option>
+        </select>
                 
                 <label for="userPass">Escriba una Contraseña</label>
-                <input name="password" id="userPass" type="password" placeholder="Ingrese una contraseña" maxlength="20"
+                <input name="password" id="userPass" type="password" placeholder="Ingrese una contraseña" maxlength="20"   pattern="^(?=.[a-z])(?=.[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                 title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número" required>
 
                 <label for="userConfirmPass">Confirmar Contraseña</label>
                 <input name="confirmPassword" id="userConfirmPass" type="password" placeholder="Confirme su contraseña"
-                maxlength="20"
-                title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número" required>
+                maxlength="20"   pattern="^(?=.[a-z])(?=.[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número"  required>
 
 
                 
