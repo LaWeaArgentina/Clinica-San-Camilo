@@ -33,13 +33,13 @@ function validarFormulario() {
 
 
     // Validación de nombre
-    if (nombre === "") {
+    if (!validarNombre(nombre)) {
         alert("Por favor ingrese su nombre.");
         return false;
     }
 
     // Validación de apellido
-    if (apellido === "") {
+    if (!validarApellido(apellido)) {
         alert("Por favor ingrese su apellido.");
         return false;
     }
@@ -65,7 +65,7 @@ function validarFormulario() {
     }
 
     // Validación de correo electrónico
-    if (correo === "") {
+    if (!validarCorreo(correo)) {
         alert("Por favor ingrese su correo electrónico.");
         return false;
     }
@@ -77,7 +77,7 @@ function validarFormulario() {
     }
 
     // Validación de contraseña
-    if (contrasena === "") {
+    if (!validarContrasena(contrasena)) {
         alert("Por favor ingrese una contraseña.");
         return false;
     }
