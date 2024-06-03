@@ -31,13 +31,14 @@ Las tablas serán las siguientes:
 
 <h2>Tabla usuarios</h2>
 La tabla usuarios tendrá las siguientes columnas:
-
-id número único autoincremental clave primaria
-nombre-completo texto no nulo
-teléfono text nullable
-nombre-usuario texto no nulo
-contraseña texto no nulo (cifrado)
-especialidad clave foránea 
+<ul>
+  <li>id número único autoincremental clave primaria</li>
+  <li>nombre-completo texto no nulo</li>
+  <li>teléfono text nullable</li>
+  <li>nombre-usuario texto no nulo</li>
+  <li>contraseña texto no nulo (cifrado)</li>
+  <li>especialidad clave foránea</li>
+</ul>
 
 La id del usuario se usará como clave foránea en los turnos.
 La contraseña debería ser un texto, preferentemente cifrado. 
