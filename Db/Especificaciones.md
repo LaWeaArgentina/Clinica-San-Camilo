@@ -42,9 +42,9 @@ La tabla usuarios tendrá las siguientes columnas:
 
 ``` mysql
 id INT NOT NULL AUTO_INCREMENT,
-nombre-completo VARCHAR(255) NOT NULL,
-sexo ENUM('masculino, 'femenino') NOT NULL,
-fecha-nacimiento DATE,
+nombre_completo VARCHAR(255) NOT NULL,
+sexo ENUM('masculino', 'femenino') NOT NULL,
+fecha_nacimiento DATE,
 email VARCHAR(255) NOT NULL,
 prepaga INT,
 especialidad INT,
