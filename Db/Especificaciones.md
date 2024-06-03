@@ -40,6 +40,19 @@ La tabla usuarios tendrá las siguientes columnas:
   <li>especialidad clave foránea</li>
 </ul>
 
+``` mysql
+id INT NOT NULL AUTO_INCREMENT,
+nombre_completo VARCHAR(255) NOT NULL,
+sexo ENUM('masculino', 'femenino') NOT NULL,
+fecha_nacimiento DATE,
+email VARCHAR(255) NOT NULL,
+prepaga INT,
+especialidad INT,
+password VARCHAR(64) NOT NULL,
+PRIMARY KEY id,
+FOREIGN KEY prepaga, especialidad
+```
+
 La id del usuario se usará como clave foránea en los turnos.
 La contraseña debería ser un texto, preferentemente cifrado. 
 La especialidad será una clave foránea que vincula al usuario con una disciplina si se trata de un profesional. 
