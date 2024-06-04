@@ -41,16 +41,25 @@ La tabla usuarios tendrá las siguientes columnas:
 </ul>
 
 ``` mysql
-id INT NOT NULL AUTO_INCREMENT,
-nombre_completo VARCHAR(255) NOT NULL,
-sexo ENUM('masculino', 'femenino') NOT NULL,
-fecha_nacimiento DATE,
-email VARCHAR(255) NOT NULL,
-prepaga INT,
-especialidad INT,
-password VARCHAR(64) NOT NULL,
-PRIMARY KEY id,
-FOREIGN KEY prepaga, especialidad
+CREATE TABLE usuarios (
+  id INT NOT NULL AUTO_INCREMENT,
+  nombre_completo VARCHAR(255) NOT NULL,
+  sexo ENUM('masculino', 'femenino') NOT NULL,
+  fecha_nacimiento DATE,
+  email VARCHAR(255) NOT NULL,
+  prepaga INT,
+  especialidad INT,
+  password VARCHAR(64) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (prepaga)
+    REFERENCES prepagas(id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  FOREIGN KEY (especialidad)
+    REFERENCES especialidades(id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+) ENGINE=INNODB
 ```
 
 La id del usuario se usará como clave foránea en los turnos.
