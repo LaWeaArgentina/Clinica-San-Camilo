@@ -1,27 +1,28 @@
-Especificaciones para la base de datos del proyecto clínica San Camilo.
+<h1>Especificaciones para la base de datos del proyecto clínica San Camilo.</h1>
 
+<h2>Generalidades</h2>
 Esta base de datos tiene que respaldar el funcionamiento de la app de clínica San Camilo (proyecto de CaC).
 
 La funcionalidad planeada para esta app es la siguiente:
 
 <ol>
   <li>Crear cuenta de usuario</li>
-  <li>autentificar usuario</li>
-  <li>sacar turnos</li>
-  <li>agregar profesionales</li>
+  <li>Autentificar usuario</li>
+  <li>Sacar turnos</li>
+  <li>Agregar profesionales</li>
 </ol>
 
 Para este fin tenemos que llevar un registro de personas. Cada persona va a ser un usuario, ya sea paciente o profesional. Estos usuarios necesitan credenciales (nombre de usuario y contraseña). Habría que considerar la necesidad de cifrar las contraseñas.
 
-Necesitamos una tabla con las distintas disciplinas. Cada turno hará referencia a un usuario en calidad de paciente y, de haberlo, el profesional.
+Necesitamos una tabla con las distintas disciplinas. Cada turno hará referencia a un usuario en calidad de paciente y el profesional asignado (de sera una consulta general habra un profesional genérico para asignar).
 
-Los usuarios que quieran anotarse como prestadores de servicio se vincularán con una disciplina.
+Los usuarios que quieran anotarse como prestadores de servicio se vincularán con una especialidad.
 
-Para simplificar vamos a asumir que los turnos duran 1 hora y no se podrá asignar más de 1 turno al mismo profesional el mismo día a la misma hora.
+Para simplificar vamos a asumir que los turnos duran 1 hora y no se podrá asignar más de 1 turno al mismo profesional, el mismo día, a la misma hora.
 
 Esta base de datos se va a implementar en MySql y nuestro backend la consultará y actualizará en respuesta a lo que los usuarios hagan desde el frontend.
 
-Se debe acordar los nombres de las tablas, los nombres de los campos. sus tipos de datos y las relaciones; de este modo, todos los que escriban código para el backend van a saber siempre cómo interactivo con la base de datos.
+Se debe acordar los nombres de las tablas, los nombres de los campos, sus tipos de datos y las relaciones; de este modo, todos los que escriban código para el backend van a saber siempre cómo interactuar con la base de datos.
 
 Las tablas serán las siguientes:
 
@@ -29,6 +30,7 @@ Las tablas serán las siguientes:
   <li>usuarios</li>
   <li>turnos</li>
   <li>especialidades</li>
+  <li>prepagas</li>
 </ul>
 
 <h2>Tabla usuarios</h2>
@@ -64,10 +66,10 @@ CREATE TABLE usuarios (
 ) ENGINE=INNODB
 ```
 
-La id del usuario se usará como clave foránea en los turnos.
+La id del usuario se usará como clave foránea en los turnos, tanto para el campo de paciente como el del profesional.
 La contraseña debería ser un texto, preferentemente cifrado.
 La especialidad será una clave foránea que vincula al usuario con una disciplina si se trata de un profesional.
-La prepaga será una clave foránea que vincula al usuario con un prestador de medicina prvidada, que se almacenaran en otra tabla.
+La prepaga será una clave foránea que vincula al usuario con un prestador de medicina prepaga, que se almacenaran en otra tabla.
 La tabla tendrá como mínimo un usuario el cual representará el profesional para todos los turnos de consulta general.
 Su especialidad será un registro de la tabla de especialidades que llevará nombre 'Consulta General'.
 
