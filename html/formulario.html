@@ -1,87 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Form-registration</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/form-reg.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/form-reg.css" />
+  </head>
 
-
-<body>
-
+  <body>
     <form id="form" method="post" action="javascript:void(0)">
-        <a href="../index.html">        
-            <img id="logo" src="../img/clinica-logo.png" alt="Logo.clinica">
-        </a>
-        <div class="container">
+      <a href="../index.html">
+        <img id="logo" src="../img/clinica-logo.png" alt="Logo.clinica" />
+      </a>
+      <div class="container">
+        <h4>Formulario de Registro</h4>
+        <div id="contact-register-form">
+          <label for="username">Nombre</label>
+          <input
+            name="name"
+            id="username"
+            type="text"
+            placeholder="Ingrese su Nombre"
+            pattern="[A-Za-z]{1,50}"
+            title="El campo no acepta numeros"
+            maxlength="50"
+            required
+          />
 
-            <h4>Formulario de Registro</h4>
-            <div id="contact-register-form">
+          <label for="userLastname">Apellido</label>
+          <input
+            name="lastname"
+            id="userLastname"
+            type="text"
+            placeholder="Ingrese su Apellido"
+            pattern="[A-Za-z]{1,50}"
+            maxlength="50"
+            title="El campo no acepta numeros"
+            required
+          />
 
-                <label for="username">Nombre</label>
-                <input name="name" id="username" type="text" placeholder="Ingrese su Nombre" pattern="[A-Za-z]{1,50}"
-                    title="El campo no acepta numeros" maxlength="50" required>
-                    
-                
-                <label for="userLastname">Apellido</label>
-                <input name="lastname" id="userLastname" type="text" placeholder="Ingrese su Apellido"
-                    pattern="[A-Za-z]{1,50}" maxlength="50" title="El campo no acepta numeros" required>
+          <div class="gen">
+            <label class="genero">Sexo</label>
+            <div class="genero-tabla">
+              <div>
+                <input
+                  id="masculino"
+                  type="radio"
+                  name="gender"
+                  value="masculino"
+                  data-once=""
+                />
+                <label for="masculino">Masculino</label>
+              </div>
 
-                <div class="gen">
-                    <label class="genero">Sexo</label>
-                    <div class="genero-tabla">
-                        <div>
-                            <input id="Male" type="radio" name="gender" value="Male" data-once="">
-                            <label for="Male">Male</label>
-                        </div>
+              <div>
+                <input
+                  id="femenino"
+                  type="radio"
+                  name="gender"
+                  value="femenino"
+                  data-once=""
+                />
+                <label for="femenino">Femenino</label>
+              </div>
+            </div>
+          </div>
 
-                        <div>
-                            <input id="Female" type="radio" name="gender" value="Female" data-once="">
-                            <label for="Female">Female</label>
-                        </div>
-                    </div>
-                </div>
+          <label for="userbday">Fecha de Nacimiento</label>
+          <input
+            type="date"
+            name="birthday"
+            id="userbday"
+            min="1899-01-01"
+            title="Seleccione su Fecha de Nacimiento"
+            required
+          />
 
-                <label for="userbday">Fecha de Nacimiento</label>
-                <input type="date" name="birthday" id="userbday" min="1899-01-01"
-                title="Seleccione su Fecha de Nacimiento" required>
+          <label for="useremail">Correo Electrónico</label>
+          <input
+            name="email"
+            id="useremail"
+            type="email"
+            placeholder="Ingrese su correo electrónico"
+            maxlength="30"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            required
+          />
 
-                <label for="useremail">Correo Electrónico</label>
-                <input name="email" id="useremail" type="email" placeholder="Ingrese su correo electrónico"
-                maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
-
-             <label for="prepaga">¿Posee medicina prepaga?</label>
-        <select name="prepaga" id="prepaga" required>
+          <label for="prepaga">¿Posee medicina prepaga?</label>
+          <select name="prepaga" id="prepaga" required>
             <option value="">Seleccione una opción</option>
             <option value="No">No</option>
             <option value="OSDE">OSDE</option>
             <option value="Medicus">Medicus</option>
             <option value="Omint">Omint</option>
             <option value="Otro">Otro</option>
-        </select>
-                
-                <label for="userPass">Escriba una Contraseña</label>
-                <input name="password" id="userPass" type="password" placeholder="Ingrese una contraseña" maxlength="20"   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-                title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número" required>
+          </select>
 
-                <label for="userConfirmPass">Confirmar Contraseña</label>
-                <input name="confirmPassword" id="userConfirmPass" type="password" placeholder="Confirme su contraseña"
-                maxlength="20"   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-                title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número"  required>
+          <label for="userPass">Escriba una Contraseña</label>
+          <input
+            name="password"
+            id="userPass"
+            type="password"
+            placeholder="Ingrese una contraseña"
+            maxlength="20"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número"
+            required
+          />
 
+          <label for="userConfirmPass">Confirmar Contraseña</label>
+          <input
+            name="confirmPassword"
+            id="userConfirmPass"
+            type="password"
+            placeholder="Confirme su contraseña"
+            maxlength="20"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            title="Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número"
+            required
+          />
 
-                
-                <input type="file" id="os-img" name="image" accept="image/jpeg, image/png, image/gif, image/jpg"
-                title="Subir Imagen">
-                <input type="submit" class="enviar-btn button" value="Enviar">
-
-            </div>
+          <input
+            type="file"
+            id="os-img"
+            name="image"
+            accept="image/jpeg, image/png, image/gif, image/jpg"
+            title="Subir Imagen"
+          />
+          <input type="submit" class="enviar-btn button" value="Enviar" />
         </div>
-
-
-
+      </div>
     </form>
 
     <div id="small-card-left" class="card"></div>
@@ -89,4 +141,5 @@
     <div id="large-card-right" class="card"></div>
 
     <script src="../js/script.js"></script>
-</body>
+  </body>
+</html>
