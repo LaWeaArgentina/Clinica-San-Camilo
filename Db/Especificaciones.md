@@ -63,27 +63,26 @@ CREATE TABLE usuarios (
     REFERENCES especialidades(id)
     ON DELETE RESTRICT
     ON UPDATE CASCADE
-) ENGINE=INNODB
+) ENGINE=INNODB;
 ```
 
 La id del usuario se usará como clave foránea en los turnos, tanto para el campo de paciente como el del profesional.
 La contraseña debería ser un texto, preferentemente cifrado.
 La especialidad será una clave foránea que vincula al usuario con una disciplina si se trata de un profesional.
 La prepaga será una clave foránea que vincula al usuario con un prestador de medicina prepaga, que se almacenaran en otra tabla.
-La tabla tendrá como mínimo un usuario el cual representará el profesional para todos los turnos de consulta general.
-Su especialidad será un registro de la tabla de especialidades que llevará nombre 'Consulta General'.
-
-<h2>Tabla Prepagas</h2>
-La tabla prepagas contendrá la lista de prestadores de medicina prepaga. Tendrá solamente dos columnas, id y nombre.
+La tabla tendrá como mínimo un usuario el cual representará el profesional para todos los turnos de consulta general. Su especialidad será un registro de la tabla de especialidades que llevará nombre 'Consulta General'.
 La columna de id será la primary key y se usará en la tabla de usuarios para unir un usuario con una prepaga.
-La tabla debe contener como mínimo un registro con nombre 'No' que se usará para los pacientes sin prepaga.
 
 ```mysql
 CREATE TABLE prepagas (
   id INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=INNODB
+) ENGINE=INNODB;
+
+INSERT
+  INTO prepagas (nombre)
+  VALUE('No');
 ```
 
 <h2>Tabla Especialidades</h2>
@@ -96,5 +95,31 @@ CREATE TABLE especialidades (
   id INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=INNODB
+) ENGINE=INNODB;
+
+INSERT
+  INTO especialidades (nombre)
+  VALUE('Consulta General');
+```
+
+<h2>Tabla turnos</h2>
+Para almacenar los turnos tenemos que definir qué información es indispensable que almacene un turno. Un turno debe contener dos usuarios, el paciente y el profesional; debe tener una fecha y una hora que se deberían almacenar en campos separados. La especialidad estará determinada implicitamente por el profesional vinculado con el turno.
+
+```mysql
+CREATE TABLE turnos (
+  id INT NOT NULL AUTO_INCREMENT,
+  paciente INT NOT NULL,
+  profesional INT NOT NULL,
+  fecha DATE NOT NULL,
+  hora TIME NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (paciente)
+    REFERENCES usuarios(id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  FOREIGN KEY (profesional)
+    REFERENCES usuarios(id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+) ENGINE=INNODB;
 ```
