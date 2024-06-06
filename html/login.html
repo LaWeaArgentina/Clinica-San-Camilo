@@ -9,41 +9,36 @@
   </head>
 
   <body>
-    <a href="../index.html">
-      <img id="logo" src="../img/clinica-logo.png" alt="Logo.clinica" />
-    </a>
+    <nav>
+      <a href="../index.html">
+        <img id="logo" src="../img/clinica-logo.png" alt="Logo.clinica" />
+      </a>
+    </nav>
 
-    <div class="general">
-      <!-- <img src="./css/handshake.jpg" alt="icon handshake" class="principal-image"> -->
-      <div class="form-container">
-        <div class="login-box">
-          <h1>Ingrese y agende su turno</h1>
-          <p class="parrafo-usuario">
-            Ingrese en esta opción si ya está registrado en la web.
-          </p>
-          <form id="ingreso" action="./inicioapp.html">
-            <input type="text" class="input-field" placeholder="Nombre de Usuario" />
-            <input type="text" class="input-field" placeholder="Contraseña" />
-            <label class="check-box">
-              <input type="checkbox" /> Recordar Contraseña
-            </label>
-            <button type="submit" class="submit-button">Ingresar</button>
-          </form>
-        </div>
+    <main class="general">
+      <section class="card">
+        <h1>Ingrese y agende su turno</h1>
+        <p class="parrafo">Ingrese en esta opción si ya está registrado en la web.</p>
+        <form class="form" id="ingreso" action="./inicioapp.html">
+          <input type="text" class="input-field" placeholder="Nombre de Usuario" />
+          <input type="text" class="input-field" placeholder="Contraseña" />
+          <label class="check-box"> <input type="checkbox" /> Recordar Contraseña </label>
+          <button type="submit">Ingresar</button>
+        </form>
+      </section>
 
-        <div class="register-box">
-          <h1>Unase a nuestra comunidad</h1>
-          <p class="parrafo-invitado">
-            Si es paciente de Clinica pero todavia no se dio de alta en esta Web o nunca
-            se atendió con nosotros, ingrese en esta opción para generar su usuario y
-            contraseña.
-          </p>
+      <section class="card">
+        <h1>Unase a nuestra comunidad</h1>
+        <p class="parrafo">
+          Si es paciente de Clinica pero todavia no se dio de alta en esta Web o nunca se
+          atendió con nosotros, ingrese en esta opción para generar su usuario y
+          contraseña.
+        </p>
 
-          <form class="register-form" action="./formulario.html">
-            <button class="register-button">Registrarse</button>
-          </form>
-        </div>
-      </div>
-    </div>
+        <form class="form" action="./formulario.html">
+          <button>Registrarse</button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
