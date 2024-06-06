@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.12 47.65">
+  <defs>
+    <style>
+      .a {
+        fill: #17bfb6;
+      }
+
+      .b {
+        fill: #f9f9f9;
+      }
+    </style>
+  </defs>
+  <title>clinica-logo</title>
+  <path class="a" d="M30.87,3.67c13.7.08,23.76,10.23,23.69,23.91S44,51.43,30,51.32C16.09,51.21,6.31,41,6.44,26.69,6.56,13.25,16.8,3.6,30.87,3.67Z" transform="translate(-6.44 -3.67)"/>
+  <rect class="b" x="19.11" y="7.39" width="9.9" height="32.86"/>
+  <rect class="b" x="25.55" y="11.07" width="9.9" height="32.86" transform="translate(-3.44 54.32) rotate(-90)"/>
+</svg>
