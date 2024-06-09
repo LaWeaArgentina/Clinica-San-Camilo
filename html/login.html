@@ -19,9 +19,19 @@
       <section class="card">
         <h1>Ingrese y agende su turno</h1>
         <p class="parrafo">Ingrese en esta opción si ya está registrado en la web.</p>
-        <form class="form" id="ingreso" action="./inicioapp.html">
-          <input type="text" class="input-field" placeholder="Nombre de Usuario" />
-          <input type="text" class="input-field" placeholder="Contraseña" />
+        <form class="form" id="ingreso" action="./inicioapp.html" method="POST">
+          <input
+            type="text"
+            name="nombrUsuario"
+            class="input-field"
+            placeholder="Nombre de Usuario"
+          />
+          <input
+            type="password"
+            name="password"
+            class="input-field"
+            placeholder="Contraseña"
+          />
           <label class="check-box"> <input type="checkbox" /> Recordar Contraseña </label>
           <button type="submit">Ingresar</button>
         </form>
