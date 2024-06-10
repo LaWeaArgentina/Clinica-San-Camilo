@@ -1,0 +1,52 @@
+.modulo{
+    background-color: #7ac9c5;
+    border-radius: 15px;
+    width: 70%;
+    height: 85%;
+    display: block;
+    text-align: center;
+    padding-top: 1em;
+    select, input{
+      margin: auto;
+    }
+    
+}
+
+.form-select{
+    max-width: 500px;
+}
+
+.form-control{
+    max-width: 500px;
+}
+/* Contenedor de la cuadrícula */
+.grid-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Elementos de la cuadrícula */
+.grid-cell {
+    /*background-color: #4caf50;*/
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+
