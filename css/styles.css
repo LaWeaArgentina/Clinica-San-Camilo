@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +14,6 @@ body {
 
 .header {
   min-height: 100vh;
-  /* background: radial-gradient(rgb(80, 133, 247), rgb(5, 46, 136)); */
   background: radial-gradient(rgb(5, 160, 152), rgba(5, 160, 152, 0.501));
 }
 
@@ -148,7 +148,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  h1, h2{
+  h1,
+  h2 {
     text-align: center;
     font-size: 1.5rem;
     word-spacing: 4px;
