@@ -9,9 +9,13 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
   background: radial-gradient(rgb(5, 160, 152), rgba(5, 160, 152, 0.501));
 }
 
@@ -65,15 +69,7 @@ body {
 .hamburger-menu {
   cursor: pointer;
   display: none;
-
-  div {
-    width: 30px;
-    height: 4px;
-    background-color: #fff;
-    margin: 6px;
-    border-radius: 10px;
-    transition: 0.3s ease all;
-  }
+  font-size: large;
 }
 
 .navbar {
@@ -84,11 +80,6 @@ body {
     padding-right: 0.8rem;
     transition: 0.3s ease all;
     width: 60%;
-  }
-
-  .hamburger-menu {
-    padding-right: 1rem;
-    transition: 0.3s ease all;
   }
 }
 
@@ -249,7 +240,7 @@ body {
     }
 
     .hamburger-menu {
-      display: block;
+      display: flex;
     }
 
     .bar-change .barra1 {
