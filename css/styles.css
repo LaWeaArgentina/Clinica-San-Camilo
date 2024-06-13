@@ -43,6 +43,7 @@ img {
   .nav-links {
     display: flex;
     background: rgb(5, 160, 152);
+    padding-bottom: 2vw;
 
     li {
       list-style-type: none;
@@ -126,9 +127,7 @@ img {
   .navbar {
 
     .oculto {
-      height: 0;
-      overflow: hidden;
-      transition: height 1s;
+      display: none;
     }
 
     .nav-links {
