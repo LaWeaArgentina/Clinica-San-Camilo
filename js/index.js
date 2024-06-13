@@ -6,9 +6,5 @@ function abrirCerrarMenu() {
     /** @type HTMLElement */
     const panelNavegacion = document.querySelector(".nav-links");
 
-    if (panelNavegacion.hasAttribute("oculto")) {
-        panelNavegacion.removeAttribute("oculto");
-    } else {
-        panelNavegacion.setAttribute("oculto", "");
-    }
+    panelNavegacion.classList.toggle("oculto");
 } 

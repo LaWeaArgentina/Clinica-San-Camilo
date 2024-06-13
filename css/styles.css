@@ -17,13 +17,6 @@ img {
   height: auto;
 }
 
-.visible {
-  display: flex;
-}
-
-.oculto {
-  display: none;
-}
 
 .header {
   width: 100%;
@@ -56,6 +49,7 @@ img {
       padding-right: 1.5vw;
 
       a {
+        position: relative;
         text-decoration: none;
         color: #fff;
         font-size: 2rem;
@@ -65,12 +59,10 @@ img {
       a::after {
         position: absolute;
         content: "";
-        bottom: -4px;
-        left: 0;
         height: 2px;
         width: 0%;
-        background-color: #fff;
-        display: block;
+        background-color: white;
+        display: flex;
       }
 
       a:hover::after {
@@ -132,13 +124,14 @@ img {
 
 @media (max-width: 911px) {
   .navbar {
-    .nav-links[oculto] {
+
+    .oculto {
       height: 0;
-      transition: all 1s;
+      overflow: hidden;
+      transition: height 1s;
     }
 
     .nav-links {
-      transition: all 1s;
       position: absolute;
       top: 100%;
       overflow: hidden;
