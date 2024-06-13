@@ -45,6 +45,7 @@ img {
 
     li {
       list-style-type: none;
+      padding-right: 1.5vw;
 
       a {
         text-decoration: none;
@@ -125,7 +126,7 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 911px) {
   .navbar {
     .nav-links {
       position: absolute;
