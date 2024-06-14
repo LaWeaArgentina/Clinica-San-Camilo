@@ -124,6 +124,11 @@ img {
   }
 }
 
+.info-section::before {
+  content: "";
+  height: 12vh;
+}
+
 .info-section {
   display: flex;
   flex-direction: column;
