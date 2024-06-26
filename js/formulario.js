@@ -1,4 +1,4 @@
-import { cargarPrepagas } from "./llamadasApi";
+import { cargarPrepagas } from "./llamadasApi.js";
 
 cargarPrepagas();
 

@@ -19,7 +19,7 @@ export async function cargarPrepagas() {
         const respuesta = await fetch("https://sancamilo.vercel.app/prepagas");
         const prepagas = await respuesta.json();
 
-        for (const prepaga of prepagas) {
+        for (const prepaga of prepagas.lista) {
             const opcion = document.createElement('option');
             opcion.value = prepaga.id;
             opcion.innerHTML = prepaga.nombre;
