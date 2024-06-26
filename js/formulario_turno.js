@@ -1,4 +1,4 @@
-import { cargarEspecialidades } from "./llamadasApi";
+import { cargarEspecialidades } from "./llamadasApi.js";
 
 cargarEspecialidades();
 
