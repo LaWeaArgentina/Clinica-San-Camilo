@@ -1,4 +1,6 @@
-//test para reocnocer pattern
+import { cargarPrepagas } from "./llamadasApi";
+
+cargarPrepagas();
 
 function validarNombre(nombre) {
     const pattern = /^[A-Za-z]{1,50}$/;
