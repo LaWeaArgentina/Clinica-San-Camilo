@@ -27,11 +27,18 @@
       <div class="modulo">
         <h2> SELECCIONE ESPECIALIDAD</h2>
         <select class="form-select" name="especialidad" id="especialidad">
+          <option disabled selected>ESPECIALIDAD</option>
         </select>
       </div>
-      <div class="modulo hidden" id="fecha">
+      <div class="modulo hidden" id="profesionalModulo">
+        <h2> SELECCIONE PROFESIONAL</h2>
+        <select class="form-select" name="profesional" id="profesional">
+          <option disabled selected>PROFESIONAL</option>
+        </select>
+      </div>
+      <div class="modulo hidden" id="fechaModulo">
         <h2> SELECCIONE FECHA</h2>
-        <input id="Fecha" placeholder="MM/DD/YYYY" data-input class="form-control" />
+        <input id="Fecha" placeholder="DD/MM/YYYY" data-input class="form-control" />
       </div>
       <div class="modulo hidden" id="horario">
         <h2>SELECCIONE HORARIO</h2>
@@ -54,8 +61,8 @@
           <div id="15" class="grid-cell">19:30</div>
         </div>
       </div>
-      <div class="hidden" id="confirmar" >
-        <form action="#"><button class="btn btn-primary">CONFIRMAR TURNO</button></form>
+      <div class="hidden">
+        <form action="#"><button class="btn btn-primary" id="enviar">CONFIRMAR TURNO</button></form>
       </div>
     </div>
     <div class="grid-item footer">
@@ -76,7 +83,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
 
   <!--  .js  -->
-  <script src="../js/formulario_turno.js"></script>
+  <script type="module" src="../js/formulario_turno.js"></script>
 
 </body>
 

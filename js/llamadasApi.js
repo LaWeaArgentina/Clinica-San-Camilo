@@ -12,3 +12,23 @@ export async function cargarEspecialidades() {
         }
     }
 }
+
+export async function cargarProfesionales(id) { 
+    const menu = document.querySelector("#profesional");
+    const iteraciones = menu.options.length
+    for(let i = 1; i <= iteraciones ; i++) {
+        menu.remove(1);
+    }
+    if (id) {
+        let url = "https://sancamilo.vercel.app/usuarios/profesionales/"+id;
+        const respuesta = await fetch(url);
+        const profesionales = await respuesta.json();
+
+        for (const profesional of profesionales) {
+            const opcion = document.createElement('option');
+            opcion.value = profesional.id;
+            opcion.innerHTML = profesional.nombre_completo;
+            menu.appendChild(opcion);
+        }
+    }
+}
