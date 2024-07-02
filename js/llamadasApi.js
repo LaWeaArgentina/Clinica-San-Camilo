@@ -32,3 +32,17 @@ export async function cargarProfesionales(id) {
         }
     }
 }
+export async function cargarPrepagas() {
+    const menu = document.querySelector("#prepaga");
+    if (menu) {
+        const respuesta = await fetch("https://sancamilo.vercel.app/prepagas");
+        const prepagas = await respuesta.json();
+
+        for (const prepaga of prepagas.lista) {
+            const opcion = document.createElement('option');
+            opcion.value = prepaga.id;
+            opcion.innerHTML = prepaga.nombre;
+            menu.appendChild(opcion);
+        }
+    }
+}
