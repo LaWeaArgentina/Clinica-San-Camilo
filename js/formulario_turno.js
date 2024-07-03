@@ -105,7 +105,7 @@ async function enviar(){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            paciente:3,
+            paciente: pacienteId,
             profesional:profesionalId,
             fecha:fechaSeleccionada.value,
             hora:horaSeleccionada.value})
